@@ -4,12 +4,13 @@ import Navbar from './navbar'
 import Staking from './staking'
 import Airdrop from './airdrop'
 import Home from './home'
+import './styles/app.css'
 
 const App = () => {
   return (
    <Router>
-			<main>
-        <Navbar />			
+			<main className='wrapper'>
+        <Navbar className='navbar' />			
         <Switch>
         <Route exact path="/"
             render={(props)=>

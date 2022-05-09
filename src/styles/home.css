@@ -9,7 +9,7 @@
     flex-direction: column;
     font-family: Roboto, sans-serif;
     background-color: #2b2d2f;
-    margin-left: 250px;
+    /* margin-left: 250px; */
 }
 .hero {
     background: #000000;
@@ -343,4 +343,15 @@
     height: 15px;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+@media screen and (max-width: 550px) {
+    .homeContainer {
+        display: flex;
+        /* height: 100vh; */
+        flex-direction: column;
+        font-family: Roboto, sans-serif;
+        background-color: #2b2d2f;
+        width: 100%;
+    }
 }
