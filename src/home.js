@@ -1,20 +1,28 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { HashLink as Link } from 'react-router-hash-link'
+import React, { useEffect, useState, useRef } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import { useDispatch, useSelector } from "react-redux";
 import { connectM } from "./redux/blockchain/blockchainActions";
 import { fetchDataM } from "./redux/data/dataActions";
 import "./image/hero.gif";
-import './styles/home.css';
+import "./styles/home.css";
+import "./styles/queries.css";
 import { Image } from "./data";
 import Faq from "react-faq-component";
-import homeGif from "./image/65v378.gif";
+import homeGif from './image/maingif.gif';
 
 const joindiscord = () => {
-  setUnstaking(true)             
-}
-
+  setUnstaking(true);
+};
 
 const home = () => {
+  const toggle = document.getElementById("toggle");
+  const nav = document.getElementById("nav-wrap");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("displaynav");
+    });
+  }
 
   const [rows, setRowsOption] = useState(null);
   const faqdata = {
@@ -22,74 +30,88 @@ const home = () => {
     rows: [
       {
         title: "What is NFT?",
-        content: `NFT stands for “Non-fungible token” and is a cool way of saying it’s a truly unique digital item that YOU can buy, own, and trade.`
+        content: `NFT stands for “Non-fungible token” and is a cool way of saying it’s a truly unique digital item that YOU can buy, own, and trade.`,
       },
       {
         title: "When is the Launch?",
-        content: "22nd February 2022, 12:00 EST."
+        content: "22nd February 2022, 12:00 EST.",
       },
       {
         title: "How can I purchase Dogface Army NFTs?",
-        content: `You can purchase DogFace Army <a href="#/mint">Here</a> . `
+        content: `You can purchase DogFace Army <a href="#/mint">Here</a> . `,
       },
       {
         title: "How do I learn more about Dogface Army?",
-        content: `Go to the community on <a href="https://discord.gg/TEYKDKCS4D">Discord</a> .`
+        content: `Go to the community on <a href="https://discord.gg/TEYKDKCS4D">Discord</a> .`,
       },
       {
         title: "What is a dao ?",
         content: `Member-owned communities without centralized leadership.
         A safe way to collaborate with internet strangers.
-        A safe place to commit funds to a specific cause.`
+        A safe place to commit funds to a specific cause.`,
       },
       {
         title: "What is dogface army ?",
-        content: `The Dogface Army is member-owned place without centralized leadership where Dogface Army Staking NFT Holders can commit funds to the Dogface Army fund.`
+        content: `The Dogface Army is member-owned place without centralized leadership where Dogface Army Staking NFT Holders can commit funds to the Dogface Army fund.`,
       },
       {
         title: "Is there a whitepaper for the Dogface collection ?",
-        content: `The whitepaper can be found on the founders substack. DFA Whitepaper`
-      }
-    ]
+        content: `The whitepaper can be found on the founders substack. DFA Whitepaper`,
+      },
+    ],
   };
 
   return (
 		<div className="homeContainer">
 			<section className="headerbanner">
 				<div className="Headertext">
-					<p
-						className="heading"
-						style={{
-							textAlign: 'center',
-							color: '#ffffff',
-							paddingTop: 50,
-							paddingBottom: 30,
-							fontSize: 40,
-						}}
-					>
-						{/* FEATURED ON THE FAMOUS TIME SQUARE BILLBOARD */}
-						THE INVESTOR CLUB FOR SERIOUS INVESTORS
-						{/* The Investor Club for Serious Investors */}
+					<p className="heading" id="heading" style={{}}>
+						The Investor Club for Serious Investors
 					</p>
-				</div>
-				{/* <video loop autoPlay muted style={{ width: '100%', height: 'auto' }}> */}
-				{/* <source src="timelessapevideo720p.m4v" type="video/mp4" /> */}
-				{/* </video> */}
-				<div
-          style={{
-            // backgroundImage: url({ homeGif }),
-            display: 'flex',
-						justifyContent: 'center',
-					}}
-				>
-					<img src={homeGif} alt="loading..." width='100%' height='500' />
 				</div>
 			</section>
 			<div className="hero">{/* mint section */}</div>
 
-			<div className="hero">
+			<section
+				style={{
+					backgroundColor: 'black',
+					color: 'white',
+					width: '100%',
+					display: 'flex',
+					lineHeight: 1.5,
+					justifyContent: 'center',
+					alignItems: 'center',
+				}}
+			>
+				<div>
+					<img src={homeGif} alt="loading..." height={300} />
+					<div
+						style={{
+							marginLeft: '50px',
+							fontWeight: 'bold',
+							fontSize: '20px',
+						}}
+					>
+						<p>PRESALE - SOLD OUT </p>
+						<p>WHITE LIST - 0.08 ETH </p>
+						<p>PUBLIC - 0.1 ETH</p> <br></br>
+						<a
+							style={{
+								marginLeft: '-10px',
+								fontSize: '30px',
+								color: 'white',
+							}}
+							href="https://opensea.io/collection/dogfacearmynft"
+							target="_blank"
+						>
+							Buy on OpenSea
+						</a>
+					</div>
+				</div>
+			</section>
+
+			{/* <div className="hero">
 				<div className="herotext">
-					<p className="herosectitle">WELCOME TO THE DOGFACE ARMY</p>
 					<div className="text">
 						<p>
 							<img
@@ -147,18 +169,304 @@ const home = () => {
 				<div className="svgcont">
 					<img src="section1.png" alt="" className="heroimg" />
 				</div>
+			</div> */}
+
+			<div className="hero">
+				<div className="herotext">
+					<div className="text">
+						<p
+							style={{
+								fontSize: '28px',
+								fontWeight: 'bold',
+							}}
+						>
+							Welcome to the Dogface Army
+						</p>
+						<p>
+							Congratulations, you are invited to an ultra exclusive army of
+							serious NFT and crypto investors. Get ready to be blown away by
+							the most heavily rewarded and tactical roadmap in NFT history.
+							Stand a chance to win authentic tactical equipment like 5.11
+							Tactical and even win a Tesla CyberTruck. Receive free airdrops.
+						</p>
+					</div>
+					<button className="btn" style={{ marginBottom: 40 }}>
+						{' '}
+						Join The Discord{' '}
+					</button>
+				</div>
+				<div className="svgcont">
+					<img src="white-soldier.png" alt="" className="heroimg" />
+				</div>
 			</div>
 
-			<div>
+			<div className="hero">
+				<div className="herotext">
+					<div className="text">
+						<p
+							style={{
+								display: 'flex',
+								fontSize: '50px',
+								fontWeight: 'bold',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							FOR FREEDOM LOVERS ONLY
+						</p>{' '}
+						<br></br>
+						<p>
+							DFA is an exclusive club for serious Crypto & NFT investors. We
+							are united by the relentless pursuit of financial freedom for
+							ourselves and our loved ones. Dogface has formed a DAO that
+							delivers passive income to NFT holders. The club provides you
+							exclusive access to airdrops, staking rewards, real life events
+							and the opportunity to engage with the most hardcore Crypto & NFT
+							investor club in the world.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="teamsection">
+				<div className="carousel">
+					<div className="image-list">
+						<div className="caroimg">
+							<img
+								src="free NFTs.png"
+								alt="Team-1"
+								className="memberimg"
+								height={500}
+							/>
+							<h3>1000 FREE NFT Giveaway</h3>
+							<p className="">
+								The community are all eligible to earn a FREE Dogface NFT (worth
+								0.1ETH){' '}
+							</p>
+							{/* <a href="https://linktr.ee/mark_tulloch" className="mt-2"></a> */}
+						</div>
+						<div className="caroimg">
+							<img src="Airdrop.png" alt="Team-2" className="memberimg" />
+							<h3>FREE AIRDROPS</h3>
+							<p className="armyformat">
+								POAPS, $AMMO Rewards and Metaverse VOX Character
+							</p>
+							{/* <p className="armyrole">ARTIST</p> */}
+							{/* <a href="https://linktr.ee/chrisjstaff" className="mt-2"></a> */}
+						</div>
+						<div className="caroimg">
+							<img src="Staking.png" alt="Team-3" className="memberimg" />
+							<h3>DOGFACE STAKING</h3>
+							<p className="armyformat">
+								A Dogface soldier needs their daily $AMMO, the native Dogface
+								token.
+							</p>
+							{/* <p className="armyrole">MARKETING MANAGER</p> */}
+							{/* <a href="https://linktr.ee/JamieTawhiao" className="mt-2"></a> */}
+						</div>
+						<div className="caroimg">
+							<img src="P2E.png" alt="Team-4" className="memberimg" />
+							<h3>METAVERSE AND P2E</h3>
+							<p className="armyformat">
+								Unlock more of the Dogface story as you earn $AMMO in the
+								Metaverse
+							</p>
+							{/* <a href="https://linktr.ee/TerryCrabb" className="mt-2"></a> */}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="hero">
+				<div className="image-grid">
+					<div className="column">
+						<img src="Sandbox.png" alt="" className="grid-img" />
+						<p>- Sandbox Land Purchased</p>
+					</div>
+					<div className="column right">
+						<img src="Ammo.png" alt="" className="grid-img" />
+						<p>- 10000+ members</p>
+					</div>
+					<div className="column left">
+						<img src="traits.png" alt="" className="grid-img" />
+						<p>- 117+ Traits</p>
+					</div>
+					<div className="column">
+						<img src="Investors.png" alt="" className="grid-img last-img" />
+						<p>- Exclusive Investor club</p>
+					</div>
+				</div>
+				<div className="herotext">
+					<div className="text">
+						<p
+							style={{
+								fontSize: '28px',
+								fontWeight: 'bold',
+							}}
+						>
+							PRESALE & WHITE LIST!
+						</p>
+						<p>
+							The Dogface presale has sold out and Sandbox land has been secured
+							for the Dogface DAO. The $AMMO token and the staking LP are
+							released, while the Game Development Team start creating the
+							Dogface P2E.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="hero">
+				<div className="herotext">
+					<div className="text">
+						<p
+							style={{
+								fontSize: '28px',
+								fontWeight: 'bold',
+							}}
+						>
+							2444 MINTS - OPERATION FREEBIRD
+						</p>
+						<p>
+							When Operation Freebird is achieved our bootstrapped HQ team will
+							go full time, 19 ETH will be given out to our veteran charity
+							partners. The exclusive DFA Merch and 24k Gold Dogface Dog Tags
+							will be released for DFA NFT holders and the 4 x 1ETH prizes are
+							given to the winning DFA NFT holders.
+						</p>
+					</div>
+				</div>
+				<div className="svgcont">
+					<img
+						src="Team-6.png"
+						alt=""
+						style={{
+							height: '300px',
+							width: '300px',
+						}}
+					/>
+				</div>
+			</div>
+
+			<div className="hero">
+				<div className="svgcont">
+					<img
+						src="Mockup.jpg"
+						alt=""
+						style={{
+							height: '300px',
+							width: '600px',
+						}}
+					/>
+				</div>
+				<div className="herotext">
+					<div className="text">
+						<p
+							style={{
+								fontSize: '28px',
+								fontWeight: 'bold',
+							}}
+						>
+							4555 THE GREATEST NFT GIVEAWAY IN THE WORLD
+						</p>
+						<p>
+							The Dogface Army will host a meetup in New York City and celebrate
+							with the culmination of the 1000 FREE NFT giveaway and the great
+							1,000,000 $AMMO giveaway!!
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="hero">
+				<div className="herotext">
+					<div className="text">
+						<p
+							style={{
+								display: 'flex',
+								fontSize: '50px',
+								fontWeight: 'bold',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}
+						>
+							5555 THE DOGFACE JOURNEY BEGINS…
+						</p>{' '}
+						<br></br>
+						<p>
+							The Dogface Journey begins by donating the second 19 ETH to
+							veteran charity partners and transferring 76ETH to the Dogface DAO
+							wallet. The winner of the Cyber Truck is announced and DFA NFT
+							holders can reserve their DFA VX character, as Dogface VX enters
+							the metaverse.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div className="teamsection">
+				<h2>HEADQUARTERS</h2>
+				<div className="carousel">
+					<div className="image-list">
+						<div className="caroimg">
+							<img src="Team-1.png" alt="Team-1" className="memberimg" />
+							<h3>maj gen fleece</h3>
+							<p className="armyformat">Army - Retired</p>
+							<p className="armyrole">PROJECT LEAD</p>
+							<a href="https://linktr.ee/mark_tulloch" className="mt-2">
+								
+							</a>
+						</div>
+						<div className="caroimg">
+							<img src="Team-2.png" alt="Team-2" className="memberimg" />
+							<h3>the colonel</h3>
+							<p className="armyformat">Army - Retired</p>
+							<p className="armyrole">ARTIST</p>
+							<a href="https://linktr.ee/chrisjstaff" className="mt-2">
+								
+							</a>
+						</div>
+						<div className="caroimg">
+							<img src="Team-3.png" alt="Team-3" className="memberimg" />
+							<h3>dogface og</h3>
+							<p className="armyformat">Civilian</p>
+							<p className="armyrole">MARKETING MANAGER</p>
+							<a href="https://linktr.ee/JamieTawhiao" className="mt-2">
+								
+							</a>
+						</div>
+						<div className="caroimg">
+							<img src="Team-4.png" alt="Team-4" className="memberimg" />
+							<h3>cpt crabbman</h3>
+							<p className="armyformat">Civilian</p>
+							<p className="armyrole">COMMUNITY MANAGER</p>
+							<a href="https://linktr.ee/TerryCrabb" className="mt-2">
+								
+							</a>
+						</div>
+						<div className="caroimg">
+							<img src="Team-5.png" alt="Team-5" className="memberimg" />
+							<h3>KILLAAK</h3>
+							<p className="armyformat">Civilian</p>
+							<p className="armyrole">OPERATIONS MANAGEMENT</p>
+							<a href="https://linktr.ee/Richglover" className="mt-2">
+								
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			{/* <div>
 				<img
 					src="collection.png"
 					alt=""
 					style={{ width: '100%', height: 'auto' }}
 				/>
-			</div>
+			</div> */}
 
-			<div className="watchloves">
-				<img src="rarity.png" alt="" style={{ maxWidth: 450 }} />
+			{/* <div className="watchloves">
+				<img src="rarity.png" className="rarity" alt="" />
 				<a
 					href="#/mint"
 					className="connecthyper"
@@ -181,9 +489,9 @@ const home = () => {
 					decisions around where the pledge goes. Our promise is to provide
 					complete transparency on all charity funds & donations.
 				</p>
-			</div>
+			</div> */}
 
-			<div className="hero mintsteps">
+			{/* <div className="hero mintsteps">
 				<div className="svgcont">
 					<img src="section2.png" alt="" className="heroimg" />
 				</div>
@@ -210,8 +518,9 @@ const home = () => {
 						</p>
 					</div>
 				</div>
-			</div>
-			<div className="hero mintsteps">
+      </div> */}
+      
+			{/* <div className="hero mintsteps">
 				<div className="herotext">
 					<p className="herosectitle">Gen 2 Alpha</p>
 					<div className="text">
@@ -238,8 +547,9 @@ const home = () => {
 				<div className="svgcont">
 					<img src="section3.png" alt="" className="heroimg" />
 				</div>
-			</div>
-			<div className="hero mintsteps">
+      </div> */}
+      
+			{/* <div className="hero mintsteps">
 				<div className="svgcont">
 					<img src="section4.png" alt="" className="heroimg" />
 				</div>
@@ -264,9 +574,9 @@ const home = () => {
 						</p>
 					</div>
 				</div>
-			</div>
+			</div> */}
 
-			<div className="teamsection">
+			{/* <div className="teamsection">
 				<h2>HEADQUARTERS</h2>
 				<div className="carousel">
 					<div className="image-list">
@@ -330,7 +640,7 @@ const home = () => {
 								/>
 							</a>
 						</div>
-						{/* <div className="caroimg">
+						<div className="caroimg">
                         <img src="Team-6.png" alt="Team-6" className="memberimg" />
                         <h3>Major Gordon</h3>
                         <p className="armyformat">Civilian</p>
@@ -356,10 +666,10 @@ const home = () => {
                         <a href="https://www.dogface.io/" className="mt-2">
                           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHJSURBVHgB3VVNTgIxFH6dYcCNZm5A2bkQf04g3MAbiCdQlsYoQ4yyRE8gnkBvADcAozHu7BFYksC0tp0B2mk748Jo4pcQZt57fe/72vemAH8JHOGwyF8Ug5yLe9sYaDCUL3P/gESTqVE82By7/Et44ET5WOSRP39xZrgrW6e5/jwFKftPxTTlLGtLloo6vPbPuYoPAt9SQINOxhJqLBM/1vyBscauwMJeUwGVWejw88KsSS7fRqqpZASxoA92JCpoUAUXfCRUjFSTtkX4pt4CBkfOBB6qcs3utmTQwNc7DWcBjg64QfgWdQH5bRDb5UKiwiwg2esHp4OyR95FhJxPCH++d8YJFUkuvQAUsOeHF63e4tId5KkA6ONoP1wVwL3dbNtl0dWqiXnIU6G0NbIMjcn+4rWWNUqGQTzOWSfb2rMMjQ4KbWtVqcLuSxFCOe4gfiAsJ8jKXkXBej5o1G8CLBqa1Ud76TxgfFt/gpi98IMdiC6SScW2LkotHncIy/QInmWcjhFysGrxvwfNqHwG5DB5aKj54/iEXL0PsrlyPtc/g/9agDJi2OLS2uZRc4qRb51s950sR32Wfjk3puadrPrFXJi32a/gCxSdtvjmJFgwAAAAAElFTkSuQmCC" alt="Team Icon" />                          
                         </a>
-                    </div> */}
+                    </div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 
 			<div className="faqsection">
 				<h2>FREQUENTLY ASKED QUESTIONS</h2>
@@ -368,8 +678,8 @@ const home = () => {
 				</div>
 			</div>
 
-			<div className="footersection">
-				{/* <img src="logo.png" alt="logo" className="footerlogo" /> */}
+			{/* <div className="footersection">
+				<img src="logo.png" alt="logo" className="footerlogo" />
 				<h2>Join our community</h2>
 				<div class="sociallogins">
 					<figure>
@@ -414,7 +724,7 @@ const home = () => {
 					</figure>
 				</div>
 				<p>©2022 DogFace Army. All rights reserved.</p>
-			</div>
+			</div> */}
 
 			{/* <li className="mintbox" onClick={(e) => {
                         e.preventDefault();
@@ -424,6 +734,6 @@ const home = () => {
                     </li> */}
 		</div>
 	);
-}
+};
 
-export default home
+export default home;
