@@ -1,0 +1,186 @@
+/* UI BUG FIX */
+
+.heading {
+  padding: 2rem;
+}
+
+.image-list {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.watchloves {
+  max-width: 100%;
+}
+
+.faqsection {
+  padding: 50px 0px;
+  width: 80%;
+}
+
+.rarity {
+  width: 50%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect-btn {
+  margin-top: 3.5rem;
+}
+
+/* MEDIA QUERIES */
+
+/* 1em = 1rem = 16px */
+
+/* ------------------- */
+/* BELOW 1344px --- smaller desktops */
+/* ------------------- */
+
+@media (max-width: 88em) {
+  .heading {
+    padding: 0.8rem;
+
+    /* font-weight: 600; */
+  }
+
+  .herosectitle {
+    font-size: 3rem;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero.mintsteps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .herotext {
+    /* width: 24rem; */
+    margin: auto !important;
+  }
+
+  .mintsteps .herosectitle {
+    font-size: 2.2rem;
+  }
+
+  .card-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggle {
+    display: none;
+  }
+}
+
+/* ------------------- */
+/* BELOW 1200px --- smaller desktops */
+/* ------------------- */
+
+@media (max-width: 75em) {
+  .herotext {
+    flex: 0;
+    margin-right: 0;
+    border-radius: 0;
+    padding-left: 0;
+  }
+
+  .footersection h2 {
+    font-size: 2.6rem;
+    padding: 0 1rem;
+  }
+}
+
+/* ------------------- */
+/* BELOW 944px --- Tablets */
+/* ------------------- */
+
+@media (max-width: 59em) {
+  .image-list {
+    flex-direction: column;
+  }
+
+  .caroimg {
+    width: 100%;
+    margin: auto;
+  }
+
+  .homeContainer {
+    margin: 0;
+  }
+
+  .teamsection h2 {
+    font-size: 1.8rem;
+  }
+
+  .heroimg {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mintpage {
+    margin-left: 0 !important;
+  }
+
+  .stake-app {
+    margin-left: 0;
+  }
+
+  .card-container {
+    width: 60%;
+  }
+
+  .airdroppage {
+    margin-left: 0;
+  }
+
+  .nav-wrap {
+  }
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: block;
+    font-size: 2.4rem;
+  }
+
+  .homeContainer {
+    display: block;
+  }
+
+  .toggle {
+    color: #fff;
+    /* position: fixed; */
+    /* right: 1rem; */
+    /* top: 0.1rem; */
+    font-size: 5rem;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0.5rem;
+    background: #000000;
+  }
+}
+
+/* ------------------- */
+/* BELOW 704px --- Smaller Tablets */
+/* ------------------- */
+@media (max-width: 44em) {
+}
+
+/* ------------------- */
+/* BELOW 544px --- Phones*/
+/* ------------------- */
