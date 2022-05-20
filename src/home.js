@@ -206,7 +206,7 @@ const home = () => {
 						<p
 							style={{
 								display: 'flex',
-								fontSize: '50px',
+								fontSize: '40px',
 								fontWeight: 'bold',
 								alignItems: 'center',
 								justifyContent: 'center',
@@ -228,18 +228,15 @@ const home = () => {
 				</div>
 			</div>
 
-			<div className="teamsection">
-				<div className="carousel">
 					<div className="image-list">
 						<div className="caroimg">
 							<img
 								src="free NFTs.png"
 								alt="Team-1"
 								className="memberimg"
-								height={500}
 							/>
 							<h3>1000 FREE NFT Giveaway</h3>
-							<p className="">
+							<p className="armyformat">
 								The community are all eligible to earn a FREE Dogface NFT (worth
 								0.1ETH){' '}
 							</p>
@@ -274,11 +271,9 @@ const home = () => {
 							{/* <a href="https://linktr.ee/TerryCrabb" className="mt-2"></a> */}
 						</div>
 					</div>
-				</div>
-			</div>
 
 			<div className="hero">
-				<div className="image-grid">
+				<div className="image-grid" >
 					<div className="column">
 						<img src="Sandbox.png" alt="" className="grid-img" />
 						<p>- Sandbox Land Purchased</p>
@@ -301,7 +296,8 @@ const home = () => {
 						<p
 							style={{
 								fontSize: '28px',
-								fontWeight: 'bold',
+							  fontWeight: 'bold',
+								textAlign: 'center'
 							}}
 						>
 							PRESALE & WHITE LIST!
@@ -384,7 +380,7 @@ const home = () => {
 						<p
 							style={{
 								display: 'flex',
-								fontSize: '50px',
+								fontSize: '40px',
 								fontWeight: 'bold',
 								alignItems: 'center',
 								justifyContent: 'center',
