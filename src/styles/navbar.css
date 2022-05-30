@@ -1,4 +1,14 @@
 @import "./stake.css";
+
+@font-face {
+    font-family: "Boston";
+    src: local("Boston"), url("./boston.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Know";
+    src: local("Know"), url("./knowyour.woff2") format("woff2");
+  }
+
 @media all and (min-width: 0px) {
   .nav-wrap {
     background: #000000;
@@ -40,6 +50,7 @@
     color: var(--white);
     font: 2.5rem/4rem var(--font1);
     text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
   }
   .mintbox {
     background: linear-gradient(to bottom, #ff5722 0%, #ff6699 100%);

@@ -1,13 +1,21 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @font-face {
 	font-family: 'BebasNeueBold';
 	src: local('BebasNeueBold'), url(BebasNeueBold.ttf) format('ttf');
 }
+@font-face {
+    font-family: "Boston";
+    src: local("Boston"), url("./boston.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Know";
+    src: local("Know"), url("./knowyour.woff2") format("woff2");
+  }
 .homeContainer {
 	display: flex;
 	/* height: 100vh; */
 	flex-direction: column;
-	font-family: Roboto, sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	background-color: #2b2d2f;
 	margin-left: 250px;
 }
@@ -385,12 +393,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	transition: all 0.3s ease-in-out 0s;
-
 }
 
 
 
-.column {
+.image-div {
 	width: 40%;
 	height: 389px;
 	margin-left: 25px;
@@ -402,12 +409,12 @@
 	justify-content: center;
 	-moz-box-align: center;
 	align-items: center;
-	transition: all 0.3s ease-in-out 0s;
+	/* transition: all 0.3s ease-in-out 0s; */
 	background-color: rgb(32, 32, 32);
 	cursor: pointer;
 }
 
-.image-grid :hover {
+.image-div :hover {
 	background: rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(0, 0, 0) 0%, rgb(127, 140, 141) 90%) repeat scroll 0% 0%;
 	box-shadow: rgba(22, 53, 76, 0.7) 0px 16px 57px 0px;
 }
@@ -443,7 +450,7 @@
 		margin-top: 0px;
 	}
 
-	.column {
+	.image-div {
 		width: 80%;
 		text-align: center;
 	}
@@ -457,7 +464,7 @@
 		margin-top: 0px;
 	}
 
-	.column {
+	.image-div {
 		width: 80%;
 	}
 }

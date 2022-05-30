@@ -65,7 +65,13 @@ const home = () => {
 		<div className="homeContainer">
 			<section className="headerbanner">
 				<div className="Headertext">
-					<p className="heading" id="heading" style={{}}>
+					<p
+						className="heading"
+						id="heading"
+						style={{
+							fontFamily: 'Boston,cursive',
+						}}
+					>
 						The Investor Club for Serious Investors
 					</p>
 				</div>
@@ -177,7 +183,8 @@ const home = () => {
 						<p
 							style={{
 								fontSize: '28px',
-								fontWeight: 'bold',
+							//   fontWeight: 'bold',
+								fontFamily: 'Boston, cursive'
 							}}
 						>
 							Welcome to the Dogface Army
@@ -228,65 +235,59 @@ const home = () => {
 				</div>
 			</div>
 
-					<div className="image-list">
-						<div className="caroimg">
-							<img
-								src="free NFTs.png"
-								alt="Team-1"
-								className="memberimg"
-							/>
-							<h3>1000 FREE NFT Giveaway</h3>
-							<p className="armyformat">
-								The community are all eligible to earn a FREE Dogface NFT (worth
-								0.1ETH){' '}
-							</p>
-							{/* <a href="https://linktr.ee/mark_tulloch" className="mt-2"></a> */}
-						</div>
-						<div className="caroimg">
-							<img src="Airdrop.png" alt="Team-2" className="memberimg" />
-							<h3>FREE AIRDROPS</h3>
-							<p className="armyformat">
-								POAPS, $AMMO Rewards and Metaverse VOX Character
-							</p>
-							{/* <p className="armyrole">ARTIST</p> */}
-							{/* <a href="https://linktr.ee/chrisjstaff" className="mt-2"></a> */}
-						</div>
-						<div className="caroimg">
-							<img src="Staking.png" alt="Team-3" className="memberimg" />
-							<h3>DOGFACE STAKING</h3>
-							<p className="armyformat">
-								A Dogface soldier needs their daily $AMMO, the native Dogface
-								token.
-							</p>
-							{/* <p className="armyrole">MARKETING MANAGER</p> */}
-							{/* <a href="https://linktr.ee/JamieTawhiao" className="mt-2"></a> */}
-						</div>
-						<div className="caroimg">
-							<img src="P2E.png" alt="Team-4" className="memberimg" />
-							<h3>METAVERSE AND P2E</h3>
-							<p className="armyformat">
-								Unlock more of the Dogface story as you earn $AMMO in the
-								Metaverse
-							</p>
-							{/* <a href="https://linktr.ee/TerryCrabb" className="mt-2"></a> */}
-						</div>
-					</div>
+			<div className="image-list">
+				<div className="caroimg">
+					<img src="Airdrop.png" alt="Team-2" className="memberimg" />
+					<h3>FREE AIRDROPS</h3>
+					<p className="armyformat">
+						POAPS, $AMMO Rewards and Metaverse VOX Character
+					</p>
+					{/* <p className="armyrole">ARTIST</p> */}
+					{/* <a href="https://linktr.ee/chrisjstaff" className="mt-2"></a> */}
+				</div>
+				<div className="caroimg">
+					<img src="free NFTs.png" alt="Team-1" className="memberimg" />
+					<h3>1000 FREE NFT Giveaway</h3>
+					<p className="armyformat">
+						The community are all eligible to earn a FREE Dogface NFT (worth
+						0.1ETH){' '}
+					</p>
+					{/* <a href="https://linktr.ee/mark_tulloch" className="mt-2"></a> */}
+				</div>
+				<div className="caroimg">
+					<img src="P2E.png" alt="Team-4" className="memberimg" />
+					<h3>METAVERSE AND P2E</h3>
+					<p className="armyformat">
+						Unlock more of the Dogface story as you earn $AMMO in the Metaverse
+					</p>
+					{/* <a href="https://linktr.ee/TerryCrabb" className="mt-2"></a> */}
+				</div>
+				<div className="caroimg">
+					<img src="Staking.png" alt="Team-3" className="memberimg" />
+					<h3>DOGFACE STAKING</h3>
+					<p className="armyformat">
+						A Dogface soldier needs their daily $AMMO, the native Dogface token.
+					</p>
+					{/* <p className="armyrole">MARKETING MANAGER</p> */}
+					{/* <a href="https://linktr.ee/JamieTawhiao" className="mt-2"></a> */}
+				</div>
+			</div>
 
 			<div className="hero">
-				<div className="image-grid" >
-					<div className="column">
+				<div className="image-grid">
+					<div className="image-div">
 						<img src="Sandbox.png" alt="" className="grid-img" />
 						<p>- Sandbox Land Purchased</p>
 					</div>
-					<div className="column right">
+					<div className="image-div right">
 						<img src="Ammo.png" alt="" className="grid-img" />
 						<p>- 10000+ members</p>
 					</div>
-					<div className="column left">
+					<div className="image-div left">
 						<img src="traits.png" alt="" className="grid-img" />
 						<p>- 117+ Traits</p>
 					</div>
-					<div className="column">
+					<div className="image-div">
 						<img src="Investors.png" alt="" className="grid-img last-img" />
 						<p>- Exclusive Investor club</p>
 					</div>
@@ -296,8 +297,8 @@ const home = () => {
 						<p
 							style={{
 								fontSize: '28px',
-							  fontWeight: 'bold',
-								textAlign: 'center'
+								fontWeight: 'bold',
+								textAlign: 'center',
 							}}
 						>
 							PRESALE & WHITE LIST!
@@ -409,45 +410,35 @@ const home = () => {
 							<h3>maj gen fleece</h3>
 							<p className="armyformat">Army - Retired</p>
 							<p className="armyrole">PROJECT LEAD</p>
-							<a href="https://linktr.ee/mark_tulloch" className="mt-2">
-								
-							</a>
+							<a href="https://linktr.ee/mark_tulloch" className="mt-2"></a>
 						</div>
 						<div className="caroimg">
 							<img src="Team-2.png" alt="Team-2" className="memberimg" />
 							<h3>the colonel</h3>
 							<p className="armyformat">Army - Retired</p>
 							<p className="armyrole">ARTIST</p>
-							<a href="https://linktr.ee/chrisjstaff" className="mt-2">
-								
-							</a>
+							<a href="https://linktr.ee/chrisjstaff" className="mt-2"></a>
 						</div>
 						<div className="caroimg">
 							<img src="Team-3.png" alt="Team-3" className="memberimg" />
 							<h3>dogface og</h3>
 							<p className="armyformat">Civilian</p>
 							<p className="armyrole">MARKETING MANAGER</p>
-							<a href="https://linktr.ee/JamieTawhiao" className="mt-2">
-								
-							</a>
+							<a href="https://linktr.ee/JamieTawhiao" className="mt-2"></a>
 						</div>
 						<div className="caroimg">
 							<img src="Team-4.png" alt="Team-4" className="memberimg" />
 							<h3>cpt crabbman</h3>
 							<p className="armyformat">Civilian</p>
 							<p className="armyrole">COMMUNITY MANAGER</p>
-							<a href="https://linktr.ee/TerryCrabb" className="mt-2">
-								
-							</a>
+							<a href="https://linktr.ee/TerryCrabb" className="mt-2"></a>
 						</div>
 						<div className="caroimg">
 							<img src="Team-5.png" alt="Team-5" className="memberimg" />
 							<h3>KILLAAK</h3>
 							<p className="armyformat">Civilian</p>
 							<p className="armyrole">OPERATIONS MANAGEMENT</p>
-							<a href="https://linktr.ee/Richglover" className="mt-2">
-								
-							</a>
+							<a href="https://linktr.ee/Richglover" className="mt-2"></a>
 						</div>
 					</div>
 				</div>
@@ -515,7 +506,7 @@ const home = () => {
 					</div>
 				</div>
       </div> */}
-      
+
 			{/* <div className="hero mintsteps">
 				<div className="herotext">
 					<p className="herosectitle">Gen 2 Alpha</p>
@@ -544,7 +535,7 @@ const home = () => {
 					<img src="section3.png" alt="" className="heroimg" />
 				</div>
       </div> */}
-      
+
 			{/* <div className="hero mintsteps">
 				<div className="svgcont">
 					<img src="section4.png" alt="" className="heroimg" />
