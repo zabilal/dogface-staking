@@ -1,5 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Boogaloo&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@font-face {
+	font-family: 'BebasNeueBold';
+	src: local('BebasNeueBold'), url(BebasNeueBold.ttf) format('ttf');
+}
+@font-face {
+    font-family: "Boston";
+    src: local("Boston"), url("./boston.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Know";
+    src: local("Know"), url("./knowyour.woff2") format("woff2");
+  }
 :root {
   --color1: #060099;
   --color2: #c51e52;
@@ -57,6 +68,7 @@
     font: 2.5rem/4rem var(--font1);
     color: var(--white);
     font-weight: bold;
+    font-family: Boston, cursive;
   }
   .stake-app h2 {
     font: 1.125rem/1.8rem var(--font2);
@@ -79,11 +91,21 @@
     font-size: 23px;
     display: block;
     margin-bottom: 0px;
+    font-family: Boston, cursive;
+  }
+  .card-container .titles p {
+    /* font-size: 23px;
+    display: block;
+    margin-bottom: 0px;
+    font-family: Boston, cursive; */
+    font-weight: bold;
   }
   .card-container blockquote {
     font-size: 28px;
     display: block;
     color: #ffffff;
+    font-weight: bold;
+
   }
   .card-container:hover {
     transform: scale(1.005);
@@ -171,11 +193,13 @@
     background: none;
     color: #ffffff;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     position: absolute;
     right: 50px;
     top: 35px;
     cursor: pointer;
+    font-family: Boston, cursive;
   }
 }
 

@@ -186,6 +186,7 @@ function Mint() {
                 fontSize: 50,
                 fontWeight: "bold",
                 color: "var(--accent-text)",
+                fontFamily: 'Boston, cursive'
               }}
             >
               420 / {CONFIG.MAX_SUPPLY}
@@ -195,6 +196,7 @@ function Mint() {
               style={{
                 textAlign: "center",
                 color: "#ffffff",
+                fontWeight: 'bold'
               }}
             >
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK} style={{ color: "#ffffff" }}>
@@ -229,7 +231,8 @@ function Mint() {
                     <s.TextDescription
                       style={{
                         textAlign: "center",
-                        color: "var(--accent-text)",
+                            color: "var(--accent-text)",
+                        fontWeight: 'bold'
                       }}
                     >
                       Connect to the {CONFIG.NETWORK.NAME} network
@@ -338,6 +341,7 @@ function Mint() {
             style={{
               textAlign: "center",
               color: "var(--primary-text)",
+              fontWeight: 'bold'
             }}
           >
             Please make sure you are connected to the right network (
@@ -349,6 +353,7 @@ function Mint() {
             style={{
               textAlign: "center",
               color: "var(--primary-text)",
+              fontWeight: 'bold'
             }}
           >
             We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to

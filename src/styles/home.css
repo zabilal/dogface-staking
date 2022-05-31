@@ -86,7 +86,7 @@
 	line-height: 50px;
 	font-weight: 700;
 	margin: 30px 0px;
-	font-family: BebasNeueBold;
+	font-family: Boston, cursive;
 }
 .faqsection div {
 	background-color: #000000;
@@ -117,7 +117,7 @@
 	line-height: 50px;
 	font-weight: 700;
 	margin: 30px 0px;
-	font-family: BebasNeueBold;
+	font-family: Boston, cursive;
 	text-align: center;
 }
 .carousel {
@@ -137,19 +137,30 @@
 .caroimg h3 {
 	font-size: 23px;
 	line-height: 44px;
-	font-weight: 600;
+	font-weight: bold;
 	text-transform: uppercase;
 	margin-top: 15px;
 }
 .caroimg .armyformat {
 	font-size: 17px;
 	margin-bottom: 12px;
+	font-weight: bold;
 }
 .caroimg .armyrole {
 	font-size: 17px;
 	margin-bottom: 12px;
 	color: #20852d;
+	font-weight: bold;
 }
+
+.caroimg-title {
+	font-family: Boston, cursive;
+}
+
+.caroimg-text {
+	font-weight: bold;
+}
+
 .image-list {
 	background: #000000;
 	color: #ffffff;

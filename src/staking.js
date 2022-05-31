@@ -179,7 +179,7 @@ const Staking = () => {
           {!isConnected ? "Connect Wallet" : account.slice(0, 10)}
         </button>
       </div>
-      <h1>STAKE</h1>
+      <h1 className="title">STAKE</h1>
       <h2>
         {staking ? "staking.." : ""}
         {unstaking ? "unstaking.." : ""}
@@ -310,7 +310,7 @@ const Staking = () => {
 
       <div className="footersection">
         {/* <img src="logo.png" alt="logo" className="footerlogo" /> */}
-        <h2>Join our community</h2>
+        <h2 >Join our community</h2>
         <div class="sociallogins">
           <figure>
             <a href="https://opensea.io/collection/dogfacearmynft">

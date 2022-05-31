@@ -87,6 +87,7 @@ const home = () => {
 					lineHeight: 1.5,
 					justifyContent: 'center',
 					alignItems: 'center',
+					// fontFamily: 'Open-Sans'
 				}}
 			>
 				<div>
@@ -106,6 +107,7 @@ const home = () => {
 								marginLeft: '-10px',
 								fontSize: '30px',
 								color: 'white',
+								fontFamily: 'Boston, cursive',
 							}}
 							href="https://opensea.io/collection/dogfacearmynft"
 							target="_blank"
@@ -183,8 +185,8 @@ const home = () => {
 						<p
 							style={{
 								fontSize: '28px',
-							//   fontWeight: 'bold',
-								fontFamily: 'Boston, cursive'
+								//   fontWeight: 'bold',
+								fontFamily: 'Boston, cursive',
 							}}
 						>
 							Welcome to the Dogface Army
@@ -217,6 +219,7 @@ const home = () => {
 								fontWeight: 'bold',
 								alignItems: 'center',
 								justifyContent: 'center',
+								fontFamily: 'Boston, cursive',
 							}}
 						>
 							FOR FREEDOM LOVERS ONLY
@@ -238,8 +241,8 @@ const home = () => {
 			<div className="image-list">
 				<div className="caroimg">
 					<img src="Airdrop.png" alt="Team-2" className="memberimg" />
-					<h3>FREE AIRDROPS</h3>
-					<p className="armyformat">
+					<h3 className="caroimg-title">FREE AIRDROPS</h3>
+					<p className="armyformat caroimg-text">
 						POAPS, $AMMO Rewards and Metaverse VOX Character
 					</p>
 					{/* <p className="armyrole">ARTIST</p> */}
@@ -247,8 +250,8 @@ const home = () => {
 				</div>
 				<div className="caroimg">
 					<img src="free NFTs.png" alt="Team-1" className="memberimg" />
-					<h3>1000 FREE NFT Giveaway</h3>
-					<p className="armyformat">
+					<h3 className="caroimg-title">1000 FREE NFT Giveaway</h3>
+					<p className="armyformat caroimg-text">
 						The community are all eligible to earn a FREE Dogface NFT (worth
 						0.1ETH){' '}
 					</p>
@@ -256,16 +259,16 @@ const home = () => {
 				</div>
 				<div className="caroimg">
 					<img src="P2E.png" alt="Team-4" className="memberimg" />
-					<h3>METAVERSE AND P2E</h3>
-					<p className="armyformat">
+					<h3 className="caroimg-title">METAVERSE AND P2E</h3>
+					<p className="armyformat caroimg-text">
 						Unlock more of the Dogface story as you earn $AMMO in the Metaverse
 					</p>
 					{/* <a href="https://linktr.ee/TerryCrabb" className="mt-2"></a> */}
 				</div>
 				<div className="caroimg">
 					<img src="Staking.png" alt="Team-3" className="memberimg" />
-					<h3>DOGFACE STAKING</h3>
-					<p className="armyformat">
+					<h3 className="caroimg-title">DOGFACE STAKING</h3>
+					<p className="armyformat caroimg-text">
 						A Dogface soldier needs their daily $AMMO, the native Dogface token.
 					</p>
 					{/* <p className="armyrole">MARKETING MANAGER</p> */}
@@ -277,19 +280,19 @@ const home = () => {
 				<div className="image-grid">
 					<div className="image-div">
 						<img src="Sandbox.png" alt="" className="grid-img" />
-						<p>- Sandbox Land Purchased</p>
+						<p className="caroimg-text">- Sandbox Land Purchased</p>
 					</div>
 					<div className="image-div right">
 						<img src="Ammo.png" alt="" className="grid-img" />
-						<p>- 10000+ members</p>
+						<p className="caroimg-text">- 10000+ members</p>
 					</div>
 					<div className="image-div left">
 						<img src="traits.png" alt="" className="grid-img" />
-						<p>- 117+ Traits</p>
+						<p className="caroimg-text">- 117+ Traits</p>
 					</div>
 					<div className="image-div">
 						<img src="Investors.png" alt="" className="grid-img last-img" />
-						<p>- Exclusive Investor club</p>
+						<p className="caroimg-text">- Exclusive Investor club</p>
 					</div>
 				</div>
 				<div className="herotext">
@@ -299,6 +302,7 @@ const home = () => {
 								fontSize: '28px',
 								fontWeight: 'bold',
 								textAlign: 'center',
+								fontFamily: 'Boston, cursive',
 							}}
 						>
 							PRESALE & WHITE LIST!
@@ -320,6 +324,7 @@ const home = () => {
 							style={{
 								fontSize: '28px',
 								fontWeight: 'bold',
+								fontFamily: 'Boston, cursive',
 							}}
 						>
 							2444 MINTS - OPERATION FREEBIRD
@@ -362,6 +367,7 @@ const home = () => {
 							style={{
 								fontSize: '28px',
 								fontWeight: 'bold',
+								fontFamily: 'Boston, cursive',
 							}}
 						>
 							4555 THE GREATEST NFT GIVEAWAY IN THE WORLD
@@ -385,6 +391,7 @@ const home = () => {
 								fontWeight: 'bold',
 								alignItems: 'center',
 								justifyContent: 'center',
+								fontFamily: 'Boston, cursive',
 							}}
 						>
 							5555 THE DOGFACE JOURNEY BEGINS…
@@ -402,7 +409,7 @@ const home = () => {
 			</div>
 
 			<div className="teamsection">
-				<h2>HEADQUARTERS</h2>
+				<h2 className="caroimg-title">HEADQUARTERS</h2>
 				<div className="carousel">
 					<div className="image-list">
 						<div className="caroimg">
@@ -659,7 +666,7 @@ const home = () => {
 			</div> */}
 
 			<div className="faqsection">
-				<h2>FREQUENTLY ASKED QUESTIONS</h2>
+				<h2 className="caroimg-title">FREQUENTLY ASKED QUESTIONS</h2>
 				<div className="faqitemslist">
 					<Faq data={faqdata} getRowOptions={setRowsOption} />
 				</div>

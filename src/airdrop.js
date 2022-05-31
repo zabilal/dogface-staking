@@ -118,7 +118,9 @@ const Airdrop = () => {
                     {!isConnected ? "Connect Wallet" : account.slice(0, 10)}
                 </button>
             </div>
-            <h1>Airdrops</h1>
+            <h1 style={{
+                fontFamily: 'Boston, cursive',
+            }}>Airdrops</h1>
             <h2>Read  the Medium post for all the details on each Airdrop program.</h2>
             <h2>
                 {claiming ? "claiming.." : ""}

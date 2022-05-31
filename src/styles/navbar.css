@@ -32,6 +32,7 @@
     display: inline-block;
     width: 100%;
     margin-top: 25px;
+    font-family: Boston, cursive;
   }
   .nav-wrap .navbarlinkimgs,
   svg {
