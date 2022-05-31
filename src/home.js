@@ -279,15 +279,15 @@ const home = () => {
 			<div className="hero">
 				<div className="image-grid" id="baba">
 					<div className="image-div">
-						<img src="Sandbox.png" alt="" className="grid-img" />
+						<img src="Sandbox.png" alt="" className="grid-img1" />
 						<p className="caroimg-text">- Sandbox Land Purchased</p>
 					</div>
 					<div className="image-div right">
-						<img src="Ammo.png" alt="" className="grid-img" />
+						<img src="Ammo.png" alt="" className="grid-img2" />
 						<p className="caroimg-text">- 10000+ members</p>
 					</div>
 					<div className="image-div left">
-						<img src="traits.png" alt="" className="grid-img" />
+						<img src="traits.png" alt="" className="grid-img3" />
 						<p className="caroimg-text">- 117+ Traits</p>
 					</div>
 					<div className="image-div">

@@ -427,11 +427,19 @@
 	cursor: pointer;
 }
 
-.grid-img {
-  /* width: 70%;
-  height: 150px; */
-  height: 30%;
-	width: 60%;
+.grid-img1 {
+  	height: 40%;
+	width: 45%;
+}
+
+.grid-img2 {
+  height: 40%;
+	width: 50%;
+}
+
+.grid-img3 {
+  height: 40%;
+	width: 40%;
 } 
 
 .column p {
@@ -457,10 +465,6 @@
 
 	.image-grid {
 		width: 100%;
-	}
-
-	.grid-img {
-		
 	}
 	.right {
 		margin-top: 0px;
