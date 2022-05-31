@@ -406,7 +406,6 @@
 	transition: all 0.3s ease-in-out 0s;
 }
 
-/* .hero > .image-grid :hover { */
 .image-grid .image-div:hover {
 	background: rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(0, 0, 0) 0%, rgb(127, 140, 141) 90%) repeat scroll 0% 0%;
 	box-shadow: rgba(22, 53, 76, 0.7) 0px 16px 57px 0px;
@@ -428,11 +427,6 @@
 	cursor: pointer;
 }
 
-/* .image-div :hover {
-	background: rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(0, 0, 0) 0%, rgb(127, 140, 141) 90%) repeat scroll 0% 0%;
-	box-shadow: rgba(22, 53, 76, 0.7) 0px 16px 57px 0px;
-} */
-
 .grid-img {
   width: 70%;
   height: 150px;
@@ -450,6 +444,11 @@
 }
 .left {
 	margin-top: -50px;
+}
+
+.last-img {
+	height: 30%;
+	width: 90%;
 }
 
 @media (max-width: 550px) {

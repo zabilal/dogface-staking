@@ -215,7 +215,7 @@ const home = () => {
 						<p
 							style={{
 								display: 'flex',
-								fontSize: '40px',
+								fontSize: '28px',
 								fontWeight: 'bold',
 								alignItems: 'center',
 								justifyContent: 'center',
@@ -291,7 +291,7 @@ const home = () => {
 						<p className="caroimg-text">- 117+ Traits</p>
 					</div>
 					<div className="image-div">
-						<img src="Investors.png" alt="" className="grid-img last-img" />
+						<img src="Investors.png"  alt="" className="last-img" />
 						<p className="caroimg-text">- Exclusive Investor club</p>
 					</div>
 				</div>
@@ -340,7 +340,8 @@ const home = () => {
 				</div>
 				<div className="svgcont">
 					<img
-						src="Team-6.png"
+						// src="Team-6.png"
+						src="alt.jpg"
 						alt=""
 						style={{
 							height: '300px',
@@ -387,7 +388,7 @@ const home = () => {
 						<p
 							style={{
 								display: 'flex',
-								fontSize: '40px',
+								fontSize: '28px',
 								fontWeight: 'bold',
 								alignItems: 'center',
 								justifyContent: 'center',
