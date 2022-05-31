@@ -428,8 +428,10 @@
 }
 
 .grid-img {
-  width: 70%;
-  height: 150px;
+  /* width: 70%;
+  height: 150px; */
+  height: 30%;
+	width: 60%;
 } 
 
 .column p {
@@ -455,6 +457,10 @@
 
 	.image-grid {
 		width: 100%;
+	}
+
+	.grid-img {
+		
 	}
 	.right {
 		margin-top: 0px;
