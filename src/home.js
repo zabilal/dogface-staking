@@ -277,7 +277,7 @@ const home = () => {
 			</div>
 
 			<div className="hero">
-				<div className="image-grid">
+				<div className="image-grid" id="baba">
 					<div className="image-div">
 						<img src="Sandbox.png" alt="" className="grid-img" />
 						<p className="caroimg-text">- Sandbox Land Purchased</p>
