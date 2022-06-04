@@ -9,10 +9,14 @@ import './styles/queries.css';
 import { Image } from './data';
 import Faq from 'react-faq-component';
 import homeGif from './image/maingif.gif';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const joindiscord = () => {
 	setUnstaking(true);
 };
+
+AOS.init();
 
 const home = () => {
 	const toggle = document.getElementById('toggle');
@@ -92,6 +96,7 @@ const home = () => {
 					backgroundColor: 'black',
 					color: 'white',
 					width: '100%',
+					// height: '100vh',
 					display: 'flex',
 					lineHeight: 1.5,
 					justifyContent: 'center',
@@ -196,7 +201,11 @@ const home = () => {
 			</div> */}
 
 			<div className="hero">
-				<div className="herotext animate__animated animate__slideInUp">
+				<div
+					data-aos="slide-right"
+					data-aos-duration="2000"
+					className="herotext"
+				>
 					<div className="text ">
 						<p
 							style={{
@@ -220,7 +229,7 @@ const home = () => {
 						Join The Discord{' '}
 					</button>
 				</div>
-				<div className="svgcont animate__animated animate__slideInRight">
+				<div data-aos="slide-left" data-aos-duration="2000" className="svgcont">
 					<img src="white-soldier.png" alt="" className="heroimg" />
 				</div>
 			</div>
@@ -254,7 +263,7 @@ const home = () => {
 				</div>
 			</div>
 
-			<div className="image-list animate__animated animate__slideInUp">
+			<div data-aos="slide-up" data-aos-duration="3000" className="image-list">
 				<div className="caroimg">
 					<img src="Airdrop.png" alt="Team-2" className="memberimg" />
 					<h3 className="caroimg-title">FREE AIRDROPS</h3>
@@ -294,7 +303,9 @@ const home = () => {
 
 			<div className="hero">
 				<div
-					className="image-grid animate__animated animate__slideInLeft"
+					data-aos="slide-right"
+					data-aos-duration="2000"
+					className="image-grid"
 					id="baba"
 				>
 					<div className="image-div">
@@ -357,7 +368,7 @@ const home = () => {
 						</p>
 					</div>
 				</div>
-				<div className="svgcont animate__animated animate__slideInRight">
+				<div data-aos="slide-left" data-aos-duration="2000" className="svgcont">
 					<img
 						// src="Team-6.png"
 						src="alt.jpg"
@@ -371,7 +382,11 @@ const home = () => {
 			</div>
 
 			<div className="hero">
-				<div className="svgcont animate__animated animate__slideInLeft">
+				<div
+					data-aos="slide-right"
+					data-aos-duration="2000"
+					className="svgcont"
+				>
 					<img
 						src="Mockup.jpg"
 						alt=""
@@ -431,7 +446,11 @@ const home = () => {
 			<div className="teamsection">
 				<h2 className="caroimg-title">HEADQUARTERS</h2>
 				<div className="carousel">
-					<div className="image-list animate__animated animate__slideInUp">
+					<div
+						data-aos="slide-up"
+						data-aos-duration="2000"
+						className="image-list"
+					>
 						<div className="caroimg">
 							<img src="Team-1.png" alt="Team-1" className="memberimg" />
 							<h3>maj gen fleece</h3>
