@@ -1,80 +1,89 @@
-import React, { useEffect, useState, useRef } from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import { useDispatch, useSelector } from "react-redux";
-import { connectM } from "./redux/blockchain/blockchainActions";
-import { fetchDataM } from "./redux/data/dataActions";
-import "./image/hero.gif";
-import "./styles/home.css";
-import "./styles/queries.css";
-import { Image } from "./data";
-import Faq from "react-faq-component";
+import React, { useEffect, useState, useRef } from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import { useDispatch, useSelector } from 'react-redux';
+import { connectM } from './redux/blockchain/blockchainActions';
+import { fetchDataM } from './redux/data/dataActions';
+import './image/hero.gif';
+import './styles/home.css';
+import './styles/queries.css';
+import { Image } from './data';
+import Faq from 'react-faq-component';
 import homeGif from './image/maingif.gif';
 
 const joindiscord = () => {
-  setUnstaking(true);
+	setUnstaking(true);
 };
 
 const home = () => {
-  const toggle = document.getElementById("toggle");
-  const nav = document.getElementById("nav-wrap");
+	const toggle = document.getElementById('toggle');
+	const nav = document.getElementById('nav-wrap');
 
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      nav.classList.toggle("displaynav");
-    });
-  }
+	const [colorChange, setColorchange] = useState(false);
+	const changeNavbarColor = () => {
+		if (window.scrollY >= 30) {
+			setColorchange(true);
+		} else {
+			setColorchange(false);
+		}
+	};
+	window.addEventListener('scroll', changeNavbarColor);
 
-  const [rows, setRowsOption] = useState(null);
-  const faqdata = {
-    title: "",
-    rows: [
-      {
-        title: "What is NFT?",
-        content: `NFT stands for “Non-fungible token” and is a cool way of saying it’s a truly unique digital item that YOU can buy, own, and trade.`,
-      },
-      {
-        title: "When is the Launch?",
-        content: "22nd February 2022, 12:00 EST.",
-      },
-      {
-        title: "How can I purchase Dogface Army NFTs?",
-        content: `You can purchase DogFace Army <a href="#/mint">Here</a> . `,
-      },
-      {
-        title: "How do I learn more about Dogface Army?",
-        content: `Go to the community on <a href="https://discord.gg/TEYKDKCS4D">Discord</a> .`,
-      },
-      {
-        title: "What is a dao ?",
-        content: `Member-owned communities without centralized leadership.
+	if (toggle) {
+		toggle.addEventListener('click', () => {
+			nav.classList.toggle('displaynav');
+		});
+	}
+
+	const [rows, setRowsOption] = useState(null);
+	const faqdata = {
+		title: '',
+		rows: [
+			{
+				title: 'What is NFT?',
+				content: `NFT stands for “Non-fungible token” and is a cool way of saying it’s a truly unique digital item that YOU can buy, own, and trade.`,
+			},
+			{
+				title: 'When is the Launch?',
+				content: '22nd February 2022, 12:00 EST.',
+			},
+			{
+				title: 'How can I purchase Dogface Army NFTs?',
+				content: `You can purchase DogFace Army <a href="#/mint">Here</a> . `,
+			},
+			{
+				title: 'How do I learn more about Dogface Army?',
+				content: `Go to the community on <a href="https://discord.gg/TEYKDKCS4D">Discord</a> .`,
+			},
+			{
+				title: 'What is a dao ?',
+				content: `Member-owned communities without centralized leadership.
         A safe way to collaborate with internet strangers.
         A safe place to commit funds to a specific cause.`,
-      },
-      {
-        title: "What is dogface army ?",
-        content: `The Dogface Army is member-owned place without centralized leadership where Dogface Army Staking NFT Holders can commit funds to the Dogface Army fund.`,
-      },
-      {
-        title: "Is there a whitepaper for the Dogface collection ?",
-        content: `The whitepaper can be found on the founders substack. DFA Whitepaper`,
-      },
-    ],
-  };
+			},
+			{
+				title: 'What is dogface army ?',
+				content: `The Dogface Army is member-owned place without centralized leadership where Dogface Army Staking NFT Holders can commit funds to the Dogface Army fund.`,
+			},
+			{
+				title: 'Is there a whitepaper for the Dogface collection ?',
+				content: `The whitepaper can be found on the founders substack. DFA Whitepaper`,
+			},
+		],
+	};
 
-  return (
+	return (
 		<div className="homeContainer">
-			<section className="headerbanner">
-				<div className="Headertext">
-					<p
-						className="heading"
-						id="heading"
-						style={{
-							fontFamily: 'Boston,cursive',
-						}}
-					>
-						The Investor Club for Serious Investors
-					</p>
-				</div>
+			<section
+				className={colorChange ? 'headerbanner colorChange' : 'headerbanner'}
+			>
+				{/* <div className="Headertext"> */}
+				<p
+					className={colorChange ? 'heading colorChange' : 'heading'}
+					id="heading"
+				>
+					The Investor Club for Serious Investors
+				</p>
+				{/* </div> */}
 			</section>
 			<div className="hero">{/* mint section */}</div>
 
@@ -91,7 +100,14 @@ const home = () => {
 				}}
 			>
 				<div>
-					<img src={homeGif} alt="loading..." height={300} />
+					<img
+						src={homeGif}
+						alt="loading..."
+						height={300}
+						style={{
+							marginTop: '100px',
+						}}
+					/>
 					<div
 						style={{
 							marginLeft: '50px',
@@ -180,8 +196,8 @@ const home = () => {
 			</div> */}
 
 			<div className="hero">
-				<div className="herotext">
-					<div className="text">
+				<div className="herotext animate__animated animate__slideInUp">
+					<div className="text ">
 						<p
 							style={{
 								fontSize: '28px',
@@ -204,7 +220,7 @@ const home = () => {
 						Join The Discord{' '}
 					</button>
 				</div>
-				<div className="svgcont">
+				<div className="svgcont animate__animated animate__slideInRight">
 					<img src="white-soldier.png" alt="" className="heroimg" />
 				</div>
 			</div>
@@ -238,7 +254,7 @@ const home = () => {
 				</div>
 			</div>
 
-			<div className="image-list">
+			<div className="image-list animate__animated animate__slideInUp">
 				<div className="caroimg">
 					<img src="Airdrop.png" alt="Team-2" className="memberimg" />
 					<h3 className="caroimg-title">FREE AIRDROPS</h3>
@@ -277,7 +293,10 @@ const home = () => {
 			</div>
 
 			<div className="hero">
-				<div className="image-grid" id="baba">
+				<div
+					className="image-grid animate__animated animate__slideInLeft"
+					id="baba"
+				>
 					<div className="image-div">
 						<img src="Sandbox.png" alt="" className="grid-img1" />
 						<p className="caroimg-text">- Sandbox Land Purchased</p>
@@ -291,7 +310,7 @@ const home = () => {
 						<p className="caroimg-text">- 117+ Traits</p>
 					</div>
 					<div className="image-div">
-						<img src="Investors.png"  alt="" className="last-img" />
+						<img src="Investors.png" alt="" className="last-img" />
 						<p className="caroimg-text">- Exclusive Investor club</p>
 					</div>
 				</div>
@@ -338,7 +357,7 @@ const home = () => {
 						</p>
 					</div>
 				</div>
-				<div className="svgcont">
+				<div className="svgcont animate__animated animate__slideInRight">
 					<img
 						// src="Team-6.png"
 						src="alt.jpg"
@@ -352,7 +371,7 @@ const home = () => {
 			</div>
 
 			<div className="hero">
-				<div className="svgcont">
+				<div className="svgcont animate__animated animate__slideInLeft">
 					<img
 						src="Mockup.jpg"
 						alt=""
@@ -412,7 +431,7 @@ const home = () => {
 			<div className="teamsection">
 				<h2 className="caroimg-title">HEADQUARTERS</h2>
 				<div className="carousel">
-					<div className="image-list">
+					<div className="image-list animate__animated animate__slideInUp">
 						<div className="caroimg">
 							<img src="Team-1.png" alt="Team-1" className="memberimg" />
 							<h3>maj gen fleece</h3>

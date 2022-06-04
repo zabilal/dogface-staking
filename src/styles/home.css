@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 @font-face {
 	font-family: 'BebasNeueBold';
 	src: local('BebasNeueBold'), url(BebasNeueBold.ttf) format('ttf');
 }
 @font-face {
-    font-family: "Boston";
-    src: local("Boston"), url("./boston.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Know";
-    src: local("Know"), url("./knowyour.woff2") format("woff2");
-  }
+	font-family: 'Boston';
+	src: local('Boston'), url('./boston.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Know';
+	src: local('Know'), url('./knowyour.woff2') format('woff2');
+}
 .homeContainer {
 	display: flex;
 	/* height: 100vh; */
@@ -407,7 +410,9 @@
 }
 
 .image-grid .image-div:hover {
-	background: rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(0, 0, 0) 0%, rgb(127, 140, 141) 90%) repeat scroll 0% 0%;
+	background: rgba(0, 0, 0, 0)
+		linear-gradient(315deg, rgb(0, 0, 0) 0%, rgb(127, 140, 141) 90%) repeat
+		scroll 0% 0%;
 	box-shadow: rgba(22, 53, 76, 0.7) 0px 16px 57px 0px;
 }
 
@@ -428,26 +433,24 @@
 }
 
 .grid-img1 {
-  	height: 40%;
+	height: 40%;
 	width: 45%;
 }
 
 .grid-img2 {
-  height: 40%;
+	height: 40%;
 	width: 50%;
 }
 
 .grid-img3 {
-  height: 40%;
+	height: 40%;
 	width: 40%;
-} 
-
-.column p {
-  font-size: 20px;
-  text-align: center;
 }
 
-
+.column p {
+	font-size: 20px;
+	text-align: center;
+}
 
 .right {
 	margin-top: 50px;
@@ -459,6 +462,32 @@
 .last-img {
 	height: 30%;
 	width: 90%;
+}
+
+.heading {
+	font-family: Boston,cursive;
+	align-items: center;
+	width: 80%;
+}
+
+.heading.colorChange {
+	align-content: center;
+	color: #000000;
+}
+
+.headerbanner {
+	background-color: #202222;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+
+.headerbanner.colorChange {
+	background-color: #fff;	
 }
 
 @media (max-width: 550px) {

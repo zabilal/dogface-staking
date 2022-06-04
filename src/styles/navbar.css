@@ -1,80 +1,82 @@
-@import "./stake.css";
+@import './stake.css';
 
 @font-face {
-    font-family: "Boston";
-    src: local("Boston"), url("./boston.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "Know";
-    src: local("Know"), url("./knowyour.woff2") format("woff2");
-  }
+	font-family: 'Boston';
+	src: local('Boston'), url('./boston.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Know';
+	src: local('Know'), url('./knowyour.woff2') format('woff2');
+}
 
 @media all and (min-width: 0px) {
-  .nav-wrap {
-    background: #000000;
-    padding: 25px;
-    left: 0;
-    right: auto;
-    top: 0;
-    flex: 1 0 auto;
-    width: 250px;
-    height: 100%;
-    display: initial;
-    outline: 0;
-    z-index: 7;
-    border-right: 1px solid grey;
-    position: fixed;
-  }
-  .nav-wrap a {
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    margin-top: 25px;
-    font-family: Boston, cursive;
-  }
-  .nav-wrap .navbarlinkimgs,
-  svg {
-    width: 25px;
-    margin-right: 15px;
-    vertical-align: text-top;
-  }
-  .nav-wrap ul {
-    display: flex;
-    justify-content: center;
-  }
-  .nav-wrap ul li {
-    margin: 0 1rem;
-  }
-  .nav-wrap ul li a {
-    color: var(--white);
-    font: 2.5rem/4rem var(--font1);
-    text-decoration: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-  }
-  .mintbox {
-    background: linear-gradient(to bottom, #ff5722 0%, #ff6699 100%);
-    border-radius: 20px;
-    width: 100px;
-    text-align: center;
-  }
-  .stakebox {
-    background: linear-gradient(to bottom, #ff5722 0%, #ff6699 100%);
-    border-radius: 20px;
-    width: 100px;
-    text-align: center;
-  }
-  .logo {
-    /* background: white; */
-    width: 63px;
-    height: 60px;
-    margin-right: 600px;
-  }
+	.nav-wrap {
+		background: #000000;
+		padding: 25px;
+		left: 0;
+		right: auto;
+		top: 0;
+		flex: 1 0 auto;
+		width: 250px;
+		height: 100%;
+		display: initial;
+		outline: 0;
+		z-index: 7;
+		border-right: 1px solid grey;
+		position: fixed;
+	}
+
+	.nav-wrap a {
+		color: #fff;
+		font-size: 20px;
+		text-decoration: none;
+		display: inline-block;
+		width: 100%;
+		margin-top: 25px;
+		font-family: Boston, cursive;
+	}
+	.nav-wrap .navbarlinkimgs,
+	svg {
+		width: 25px;
+		margin-right: 15px;
+		vertical-align: text-top;
+	}
+	.nav-wrap ul {
+		display: flex;
+		justify-content: center;
+	}
+	.nav-wrap ul li {
+		margin: 0 1rem;
+	}
+	.nav-wrap ul li a {
+		color: var(--white);
+		font: 2.5rem/4rem var(--font1);
+		text-decoration: none;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+			'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+	.mintbox {
+		background: linear-gradient(to bottom, #ff5722 0%, #ff6699 100%);
+		border-radius: 20px;
+		width: 100px;
+		text-align: center;
+	}
+	.stakebox {
+		background: linear-gradient(to bottom, #ff5722 0%, #ff6699 100%);
+		border-radius: 20px;
+		width: 100px;
+		text-align: center;
+	}
+	.logo {
+		/* background: white; */
+		width: 63px;
+		height: 60px;
+		margin-right: 600px;
+	}
 }
 
 .toggle {
-  display: none;
+	display: none;
 }
 
 @media all and (min-width: 768px) {
@@ -85,32 +87,32 @@
 /* MEDIA QUERIES */
 
 @media (max-width: 59em) {
-  .logo-nav {
-    /* height: 500px; */
-  }
+	.logo-nav {
+		/* height: 500px; */
+	}
 
-  .nav-wrap {
-    /* display: none; */
-    position: static;
-    width: 100%;
+	.nav-wrap {
+		/* display: none; */
+		position: static;
+		width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* padding-top: 4rem; */
-    /* display: none; */
-  }
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		/* padding-top: 4rem; */
+		/* display: none; */
+	}
 
-  .nav-wrap {
-    display: none;
-  }
+	.nav-wrap {
+		display: none;
+	}
 
-  .nav-wrap.displaynav {
-    display: flex;
-  }
+	.nav-wrap.displaynav {
+		display: flex;
+	}
 
-  .nav-wrap a {
-    /* display: none; */
-  }
+	.nav-wrap a {
+		/* display: none; */
+	}
 }
